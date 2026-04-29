@@ -25,6 +25,10 @@ export default function usePantryAction(setModalOpen){
 			// const res = await axios.get(
 			// 	`http://localhost:5050/api/food/search?query=${query}`
 			// );
+			console.log(
+				"FULL SEARCH URL:",
+				`${import.meta.env.VITE_API_URL}/api/food/search?query=${encodeURIComponent(query)}`
+			);
 			const res = await axios.get(
 				`${import.meta.env.VITE_API_URL}/api/food/search?query=${encodeURIComponent(query)}`
 			);

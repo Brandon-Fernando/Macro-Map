@@ -155,9 +155,10 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://macro-map-gamma.vercel.app/"
+      "https://macro-map-gamma.vercel.app"
     ],
     methods: ["GET", "POST"],
+    credentials: false
   })
 );
 
