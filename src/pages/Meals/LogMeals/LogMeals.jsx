@@ -8,7 +8,7 @@ import LogModal from "./components/LogModal";
 import { useLogContext } from "../../../context/LogContext";
 import { useQuiz } from "../../../context/QuizContext";
 import useIsDesktop from "../../../hooks/useIsDesktop";
-import LogSidebar from "./components/LogSideBar";
+import LogSidebar from "./components/LogSidebar";
 import NutritionToggle from "../../../components/NutrientInfo/NutritionToggle/NutritionToggle";
 import useIsDesktopHorizontal from "../../../hooks/useIsDesktopHorizontal";
 
