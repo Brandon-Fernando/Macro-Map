@@ -1,0 +1,57 @@
+.pantrylist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 0.5rem;
+}
+
+.pantrylist-grid.desktop {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.pantry-item-card{
+    height: 6rem;
+    border-radius: 20px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.title-serv{
+    display: flex;
+    flex-direction: column;
+}
+
+.pantry-item-title{
+    font-family: "caros-bold";
+    font-size: 0.8rem;
+}
+
+.pantry-item-serv{
+    font-family: "caros-medium";
+    font-size: 0.67rem;
+    color: #cecece;
+}
+
+.cal-arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.pantry-item-cal{
+    font-family: "caros-medium";
+    font-size: 0.8rem;
+}
+
+.arrow{
+    color: #FE9844;
+}
+
+
+.page-layout-sidebar{
+    display: flex;
+    min-height: 100vh;
+}
+

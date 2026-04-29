@@ -1,0 +1,187 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #F3F2F7;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.text-input{
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 15px;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.235);
+  cursor: pointer;
+  padding: 0 0.7rem;
+  font-family: "caros-bold";
+  font-size: 16px;
+  position: relative;
+}
+
+.card-design{
+  background-color: white;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+  border-radius: 50px;
+}
+
+.main-bold-title{
+  font-family: "caros-bold";
+  font-size: 0.85rem;
+}
+
+.main-reg-title{
+  font-family: "caros-medium";
+  font-size: 0.85rem;
+}
+
+.main-light-title{
+  font-family: "caros-light";
+  font-size: 0.85rem;
+}
+
+.main-bold-title-M{
+  font-family: "caros-bold";
+  font-size: 1rem;
+}
+
+.main-bold-subtitle{
+  font-family: "caros-bold";
+  font-size: 0.7rem;
+}
+
+.main-reg-subtitle{
+  font-family: "caros-medium";
+  font-size: 0.7rem;
+}
+
+.main-reg-subtitle-s{
+  font-family: "caros-medium";
+  font-size: 0.67rem;
+}
+
+.main-light-subtitle{
+  font-family: "caros-light";
+  font-size: 0.7rem;
+}
+
+.main-light-subtitle-s{
+  font-family: "caros-light";
+  font-size: 0.67rem;
+}
+
+.light-subtitle{
+  font-family: "caros-light";
+  font-size: 0.7rem;
+  color: #B5B5B5;
+}
+
+.reg-subtitle{
+  font-family: "caros-medium";
+  font-size: 0.7rem;
+  color: #cecece;
+}
+
+.page-container {
+  flex: 1;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F2F7;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  gap: 1rem;
+  
+}
+
+.page-container.sidebar-open {
+  margin-right: 320px; /* Same width as your sidebar */
+}
+
+.empty-body-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-body-main-container{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px){
+  .main-bold-subtitle{
+    font-size: 1rem;
+  }
+
+  .reg-subtitle{
+    font-size: 1rem;
+  }
+
+  .page-container{
+    padding: 2rem;
+  }
+
+}
+
+@font-face {
+  font-family: "Thunder-BlackLC";
+  src: local("Thunder-BlackLC"),
+    url("./fonts/Thunder-BlackLC.ttf") format("opentype");
+}

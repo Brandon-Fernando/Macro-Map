@@ -1,0 +1,61 @@
+.button{
+    width: 100%;
+    height: 3rem;
+    border-radius: 50px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "caros-bold";
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.button.primary{
+    background-color: white;
+}
+
+.button.secondary{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(229, 229, 229, 0.4), 
+        rgba(140, 140, 140, 0.4) 
+    );
+    color: white;
+}
+
+
+.button.tertiary{
+    background-color: #FE9844;
+    color: white;
+}
+
+/* BACK BUTTON  */
+.main-back-button-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-back-button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-back-text{
+    font-family: "caros-bold";
+}
+
+.main-back-button-container.white .main-back-button{
+    background-color: white;
+    color: #FE9844;
+}
+
+.main-back-button-container.white .main-back-text{
+    color: white;
+}

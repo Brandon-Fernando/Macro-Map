@@ -1,0 +1,102 @@
+.icon-container{
+    background-color: #EDEDED;
+    color: #C5C5C5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container.main{
+    background-color: #FE9844;
+    color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
+
+
+
+.icon-container.light-dark{
+    background-color: #cecece;
+}
+
+.icon-container.L{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    
+}
+
+.icon-container.M{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+}
+
+.icon-container.ML{
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+}
+
+.icon-container.S{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 5px;
+    font-size: 0.6rem;
+}
+
+.icon-container.S .icon-img{
+    width: 0.6rem;
+    height: auto;
+}
+
+.icon-container.M .icon-img{
+    width: 0.7rem;
+    height: auto;
+}
+
+.icon-container.ML .icon-img{
+    width: 0.8rem;
+    height: auto;
+}
+
+@media (min-width: 400px){
+    .icon-container.M{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}
+
+@media (min-width: 768px){
+    .icon-container.M{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icon-container.M .icon-img{
+        width: 1rem;
+        height: auto;
+    }
+
+    .icon-container.L{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .icon-container.M{
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .icon-container.M .icon-img{
+        width: 0.7rem;
+        height: auto;
+    }
+}

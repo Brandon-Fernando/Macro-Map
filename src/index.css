@@ -1,0 +1,55 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the root takes up the full screen */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  margin: 0;
+}
+
+@font-face {
+  font-family: "base-neutral";
+  src: local("Base-Neutral"),
+    url("./fonts/Base-Neutral.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "caros-bold";
+  src: local("Caros-Bold"),
+    url("./fonts/Caros-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "caros-medium";
+  src: local("Caros-Medium"),
+    url("./fonts/Caros-Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "caros-light";
+  src: local("Caros-Light"),
+    url("./fonts/Caros-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "oswald-bold";
+  src: local("Oswald-Bold"),
+    url("./fonts/Oswald-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thunder-BlackLC";
+  src: local("Thunder-BlackLC"),
+    url("./fonts/Thunder-BlackLC.ttf") format("opentype");
+}

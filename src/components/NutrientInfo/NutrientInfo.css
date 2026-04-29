@@ -1,0 +1,201 @@
+.nutrient-info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* CALORIES  */
+.nutri-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.nutri-icon-label{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nutri-label{
+    font-family: "caros-medium";
+    font-size: 0.9rem;
+}
+
+.nutri-label-unit{
+    font-family: "caros-medium";
+    color: #cecece;
+    font-size: 0.8rem;
+}
+
+.nutri-cal-val{
+    font-family: "caros-bold";
+    font-size: 1.8rem;
+}
+
+.total-cal-val{
+    color: #cecece;
+    font-family: "caros-medium";
+}
+
+.cal-progress-bar{
+    width: 100%;
+    height: 1rem;
+    background-color: #cecece;
+    border-radius: 50px;
+}
+
+/* OTHER NUTRIENTS  */
+.nutri-val-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nutri-val-container.small{
+    display: flex;
+    flex-direction: column;
+}
+
+.nutri-val-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+
+}
+
+.nutri-val-card-label{
+    font-family: "caros-bold";
+    font-size: 0.8rem;
+}
+
+.other-nutri-val{
+    font-family: "caros-medium";
+    font-size: 0.6rem;
+    display: flex;
+    gap: 0.2rem;
+}
+
+.nutri-progress-bar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: #cecece;
+    border-radius: 50px;
+}
+
+
+/* PROGRESS BAR  */
+.progress-bar-container{
+    width: 100%;
+    background-color: #cecece;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.bar{
+    height: 100%;
+    background-color: #FE9844;
+    border-radius: inherit;
+}
+
+.progress-bar-container.big{
+    height: 1rem;
+}
+
+.progress-bar-container.small{
+    height: 0.5rem;
+}
+
+.progress-bar-container.large{
+    height: 1.5rem;
+}
+
+/* PROGRESS CIRCLE  */
+.prog-circ-container{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: conic-gradient(
+        #FE9844 calc(var(--percentage) * 1%), 
+        #cecece 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.prog-circ-container::before{
+    content: "";
+    width: 60%;
+    height: 60%;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.prog-circ-container.S{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.prog-circ-container.M{
+    width: 5rem;
+    height: 5rem;
+}
+
+.prog-circ-container.L{
+    width: 7rem;
+    height: 7rem;
+}
+
+
+
+
+
+@media (min-width: 768px){
+    .nutri-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border-radius: 20px;
+        padding: 1rem;
+    }
+
+    .nutri-cal-val{
+        font-size: 3rem;
+    }
+
+    .total-cal-val{
+        font-size: 1.6rem;
+    }
+
+    .nutri-val-container{
+        gap: 2rem;
+    }
+
+    .nutri-val-cards{
+        gap: 0.5rem;
+    }
+
+    .nutri-val-card-label{
+        font-size: 1rem;
+    }
+
+    .other-nutri-val{
+        font-size: 0.8rem;
+    }
+
+    .prog-circ-container.S{
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .prog-circ-container.S{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

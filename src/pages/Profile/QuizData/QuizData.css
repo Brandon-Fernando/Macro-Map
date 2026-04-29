@@ -1,0 +1,146 @@
+
+/* ===== QUIZ RESULTS MACROS =====  */
+.quiz-macros-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.q-icon-title{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.q-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #FE9844;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.7rem;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.235);
+}
+
+.q-cal-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.q-cal-val{
+    font-family: "caros-bold";
+    font-size: 3.5rem;
+}
+
+.q-nutri-container{
+    display: flex;
+    background-color: #F3F2F7;
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    width: 100%;
+    padding: 1rem 0;
+
+}
+
+.q-nutri-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 0.2rem;
+}
+
+.q-nutri-card:not(:last-child) {
+    border-right: 1px solid #cecece;
+}
+
+.q-nutri-val{
+    font-size: 1rem;
+}
+
+
+/* ===== QUIZ DATA LIST ======  */
+.quiz-data-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+/* 
+.q-data-card{
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.67rem;
+}
+
+.q-data-icon-label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.q-data-icon{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #FE9844;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.q-data-val{
+    font-family: "caros-bold";
+    color: #cecece;
+    font-size: 0.7rem;
+} */
+
+.quiz-data-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.q-data-card{
+    display: flex;
+    padding: 0.67rem;
+    border-radius: 15px;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.q-data-q-a{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-btn{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #FE9844;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    margin-left: auto;
+}
+
+/* MODAL  */
+.update-quiz-ans{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 3rem;
+}

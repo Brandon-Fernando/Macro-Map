@@ -1,0 +1,154 @@
+.recipe-meal-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    padding: 1px;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
+}
+
+.recipe-meal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.recipe-title{
+    text-align: center;
+}
+
+
+/* ===== RECIPE MACROS =====  */
+.recipe-macros-container{
+    display: flex;
+    width: 100%;
+    gap: 0.3rem;
+}
+
+.recipe-macro-prog{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ===== MACRO PROGRESS ====  */
+
+.macro-prog-container{
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    background: conic-gradient(
+        #FE9844 calc(var(--percentage) * 1%), 
+        #cecece 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.macro-prog-container::before{
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-radius: 50px;
+    background-color: #F3F2F7;
+}
+
+.macro-prog-vals{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.macro-prog-val{
+    font-family: "caros-bold";
+    font-size: 0.67rem;
+}
+
+.macro-prog-title{
+    font-family: "caros-light";
+    font-size: 0.67rem;
+}
+
+/* ===== RECIPE DETAILS =====  */
+.recipe-details-container{
+    border-radius: 20px;
+    padding: 1rem 0;
+    display: flex;
+    width: 100%;
+}
+
+.meal-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 0.2rem;
+}
+
+.meal-detail:not(:last-child){
+    border-right: 1px solid #cecece;
+}
+
+
+.toggle-recipe{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ===== INGREDIENTS =====  */
+.recipe-ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ing-title{
+    max-width: 80%;
+}
+
+.ingredient{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 3.5rem;
+    border-radius: 15px;
+}
+
+/* ===== INSTRUCTIONS =====  */
+.instructions-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.toggle-step{
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.step-circ{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50px;
+    background-color: #FE9844;
+    cursor: pointer;
+}
+
+.step-container{
+    padding: 1rem;
+    border-radius: 15px;
+}

@@ -1,0 +1,294 @@
+/* CALENDAR  */
+.meal-calendar-container{
+    border-radius: 20px;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+}
+
+.day-container{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day-title{
+    font-family: "caros-medium";
+    font-size: 0.7rem;
+
+}
+
+.circ-temp{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    border: 4px solid #CECECE;
+}
+
+
+/* .meals-page-container{
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F3F2F7;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    gap: 1rem;
+} */
+
+/* BUTTONS  */
+.meal-buttons-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.meal-button{
+    height: 10rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.meal-button img{
+    width: 3rem;
+}
+
+.meal-button-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.meal-button-title span{
+    font-family: "caros-medium";
+    font-size: 0.8rem;
+}
+
+/* .meal-button-title i{
+    color: #cecece;
+} */
+.card-button{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #FE9844;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* MACRO MODAL  */
+.macro-totals-card-container{
+    border-radius: 20px;
+    padding: 0.5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.calories-card-icon{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.calories-label-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.calories-value{
+    font-family: "caros-bold";
+    font-size: 2.3rem;
+}
+
+.calories-label{
+    font-family: "caros-medium";
+    color: #C5C5C5;
+}
+
+.nutri-totals-container{
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.nutri-totals-card{
+    flex: 1;
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.nutri-totals-card:not(:last-child){
+    border-right: 1px solid #cecece;
+}
+
+.nutri-totals-vals{
+    display: flex;
+    flex-direction: column;
+    font-family: "caros-medium";
+    color: #C5C5C5;
+    font-size: 0.65rem;
+}
+
+.nutri-totals-val{
+    font-family: "caros-bold";
+    font-size: 0.75rem;
+    color: black;
+}
+
+
+
+
+
+/* DETAILS  */
+.details-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    flex: 1;
+}
+
+.meal-details{
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.detail{
+    flex: 1;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+.detail i{
+    color: #FE9844;
+    padding-bottom: 0.2rem;
+}
+
+.detail-button{
+    margin-top: auto;
+    padding-bottom: 1rem;
+}
+
+/* INGREDIENTS  */
+.ingredients-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 0 1px;
+    padding-bottom: 1rem;
+}
+
+.ingredient-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.ingredient-title{
+    text-align: left;
+    max-width: 80%;
+}
+
+/* RECIPES  */
+.recipe-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    flex: 1;
+    min-height: 0;
+}
+
+
+@media (min-width: 768px){
+    /* ===== DETAILS =====  */
+    .details-container{
+        padding: 0.2rem;
+    }
+    .detail{
+        gap: 0.5rem;
+        font-size: 1.5rem;
+
+    }
+
+    .detail span{
+        font-size: 1rem;
+    }
+
+    /* ===== MACRO MODAL =====  */
+    /* .macros-modal-container{
+        gap: 2rem;
+    }
+
+    .macro-modal-nutrient-card img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .macro-modal-nutrient-card span{
+        font-size: 1.2rem;
+    }
+
+    .macro-modal-nutri-title{
+        padding-bottom: 1rem;
+    } */
+    .nutri-totals-card{
+        flex: 1;
+        display: flex;
+        gap: 0.2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (min-width: 1024px){
+        .meal-page-body{
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 4rem 4rem 4rem;
+        }
+
+        .meal-button{
+            height: 15rem;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+        
+        }
+
+        .meal-button img{
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+}

@@ -1,0 +1,131 @@
+.nutri-toggle-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.5rem;
+
+}
+
+/* DISPLAY PROGRESS  */
+.nutri-prog-display{
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem
+}
+
+.prog-cont{
+    width: 100%;
+    height: 2rem;
+}
+
+.selected-val{
+    font-family: "caros-bold";
+    font-size: 1.5rem;
+}
+
+.selected-goal{
+    font-family: "caros-medium";
+    color: #cecece;
+    font-size: 0.8rem;
+}
+
+.prog-cont{
+    width: 100%;
+    background-color: #cecece;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 1.5rem;
+}
+
+.bar{
+    height: 100%;
+    background-color: #FE9844;
+    border-radius: inherit;
+}
+
+
+/* NUTRI BUTTONS  */
+.nutri-toggle-button-container{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.nutri-toggle{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* background-color: #E8E7EB; */
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+
+/* NUTRI ICONS  */
+.nutri-toggle-icon{
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C5C5C5;
+    font-size: 0.8rem;
+}
+
+.nutri-toggle.selected .nutri-toggle-icon{
+    color: white;
+    background-color: rgba(227, 227, 227, 0.64);
+}
+
+.nutri-toggle-icon img{
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+.nutri-toggle.selected{
+    color: white;
+}
+
+.nutri-toggle.selected .toggle-unit{
+    color: white;
+}
+
+.nutri-toggle-val{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nutri-val-unit{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.toggle-val{
+    font-family: "caros-bold";
+    font-size: 1.2rem;
+}
+
+.toggle-unit{
+    font-family: "caros-medium";
+    color: #B5B5B5;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px){
+    .nutri-toggle-container{
+        padding: 2rem;
+    }
+
+    
+}

@@ -1,0 +1,89 @@
+.page-header-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logo{
+    width: 2.5rem;
+    height: auto;
+}
+
+.header-title{
+    font-family: "caros-medium";
+    font-size: 1.7rem;
+    /* text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235); */
+}
+
+.header-title-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-button{
+    background-color: #FE9844;
+    color: white;
+    padding: 0.4rem 1rem;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    border-radius: 50px;
+    font-family: "caros-medium";
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+    transition: scale 0.3s ease;
+}
+
+.header-button:hover{
+    scale: 1.035
+}
+
+.header-button:active{
+    scale: 0.94;
+}
+
+.back-header{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 5.5rem;
+    cursor: pointer;
+}
+
+.back-header:hover{
+    scale: 1.035
+}
+
+.back-header:active{
+    scale: 0.94;
+}
+
+
+
+.back{
+    width: 2rem;
+    height: 2rem;
+    background-color: #FE9844;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+}
+
+.back-header span{
+    font-family: "caros-medium";
+    color: #FE9844;
+}
+
+@media (min-width: 768px){
+    .header-title{
+        font-size: 2.3rem;
+    }
+}
+
+

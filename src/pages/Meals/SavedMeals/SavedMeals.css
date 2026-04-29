@@ -1,0 +1,296 @@
+.saved-meals-list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 0.5rem;
+}
+
+.saved-meals-list-card{
+    height: 6rem;
+    border-radius: 20px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.saved-meals-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.saved-meals-card{
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 4.5rem;
+
+}
+
+.saved-title-cal{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    
+}
+
+.burger-meals{
+    font-size: 0.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    background-color: #FE9844;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.235);
+}
+
+
+/* MEAL PREP LIST  */
+.meal-prep-folder{
+    background-color: white;
+    height: 6rem;
+    margin-top: 1rem;
+    border-radius: 0 15px 15px 15px;
+    position: relative;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+}
+
+.meal-prep-folder:only-child {
+    width: 50%;
+    /* max-width: 100%; */
+    max-width: 8rem;
+  }
+
+.meal-prep-folder::before{
+    content: '';
+    width: 50%;
+    height: 12px;
+    position: absolute;
+    background-color: white;
+    top: -12px;
+    border-radius: 20px 20px 0 0;
+}
+
+.folder-content{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.burger{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    background-color: #FE9844;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.235);
+}
+
+.folder-title{
+    font-family: "caros-medium";
+    font-size: 0.65rem;
+}
+
+
+.edit-meal-prep-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-circ{
+    width: 3rem;
+    height: 3rem;
+    background-color: #FE9844;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-meal-prep-title{
+    width: 100%;
+}
+
+.input-save-container{
+    display: flex;
+    width: 100%;
+    padding-top: 0.3rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meal-prep-input{
+    border: none;
+    outline: none;
+    height: 2rem;
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.235);
+    padding-left: 0.5rem;
+    font-size: 0.67rem;
+    flex: 1;
+    font-family: "caros-medium";
+}
+
+.delete-meal-prep{
+    width: 100%;
+}
+
+.save{
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FE9844;
+    font-size: 0.8rem;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+}
+
+.delete-meal-prep-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.delete-meal-prep-msg{
+    display: flex;
+    flex-direction: column;
+}
+
+.cancel-delete{
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.edit-meal-modal-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit-delete-msg{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* EDIT DELETE MODAL  */
+.edit-delete-mp-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edit-delete-mp-container img{
+    width: 4rem;
+    height: auto;
+}
+
+.edit-title-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.edit-title{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 2rem;
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.235);
+    padding-left: 0.5rem;
+    font-family: "caros-light";
+    font-size: 0.7rem;
+}
+
+.edit-title-container span{
+    text-align: center;
+}
+
+.edit-delete-btns{
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    gap: 0.5rem;
+}
+
+.update-title-btn{
+    flex: 1;
+}
+
+.delete-mp-btn{
+    width: 3rem;
+    height: 3rem;
+    background-color: #DADADA;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    color: #B5B5B5;
+}
+
+.delete-mp-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.delete-mp-container img{
+    width: 4rem;
+    height: auto;
+}
+
+.delete-mp-container span{
+    max-width: 80%;
+}
+
+.cancel-btn{
+    color: #FE9844;
+    font-family: "caros-medium";
+    font-size: 0.7rem;
+    padding-top: 0.5rem;
+}
+
+.dlt-btn{
+    width: 100%;
+}

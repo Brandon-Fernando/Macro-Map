@@ -1,0 +1,31 @@
+<svg width="87" height="111" viewBox="0 0 87 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="11" width="82" height="93" rx="10" fill="#E5E5E5"/>
+<rect x="23" y="7" width="36" height="9" rx="1" fill="#B9B9B9"/>
+<circle cx="41" cy="8" r="8" fill="#B9B9B9"/>
+<line x1="20" y1="33" x2="68" y2="33" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="33" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+<line x1="20" y1="48" x2="68" y2="48" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="48" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+<line x1="20" y1="64" x2="68" y2="64" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="64" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+<line x1="20" y1="80" x2="68" y2="80" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="80" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+<mask id="mask0_2641_188" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="82" height="104">
+<rect y="11" width="82" height="93" rx="10" fill="#E5E5E5"/>
+<rect x="23" y="7" width="36" height="9" rx="1" fill="#B9B9B9"/>
+<circle cx="41" cy="8" r="8" fill="#B9B9B9"/>
+<line x1="20" y1="33" x2="68" y2="33" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="33" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+<line x1="20" y1="48" x2="68" y2="48" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="48" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+<line x1="20" y1="64" x2="68" y2="64" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="64" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+<line x1="20" y1="80" x2="68" y2="80" stroke="#D0CECE" stroke-width="2" stroke-linecap="round"/>
+<circle cx="12" cy="80" r="1.5" fill="#D0CECE" stroke="#D0CECE"/>
+</mask>
+<g mask="url(#mask0_2641_188)">
+<rect x="41" y="-9" width="53" height="121" fill="white" fill-opacity="0.35"/>
+</g>
+<circle cx="75" cy="99" r="12" fill="#FE9844"/>
+<path d="M69 99.7895L72.0591 103.144C72.4705 103.595 73.1867 103.575 73.5727 103.102L81 94" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

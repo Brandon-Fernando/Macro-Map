@@ -1,0 +1,258 @@
+.meal-prep-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meal-prep-macros-container, .meal-prep-list-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.load-success-container-mp{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* MEAL PREP LIST  */
+.meal-prep-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.meal-prep-list-card{
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.meal-prep-list-card i{
+    color: #B5B5B5;
+}
+
+.meal-prep-list-icon-label{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.meal-prep-list-label-cal{
+    display: flex;
+    flex-direction: column;
+}
+
+.cal-sub{
+    font-size: 0.7rem;
+}
+
+
+/* MEAL PREP MODAL  */
+.meal-prep-modal-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    flex: 1;
+    min-height: 0;
+}
+
+
+/* MEAL PREP SAVE MODAL  */
+.save-input{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.save-name{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 3rem;
+    border-radius: 15px;
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.235);
+    padding-left: 1rem;
+    font-size: 0.7rem;
+    font-family: "caros-medium";
+}
+
+/* SIDE BAR  */
+/* .recipe-sidebar-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.rec-side-title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "caros-bold";
+
+}
+
+.sidebar-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.macro-sidebar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    flex: 1;
+}
+
+.cal-circ-prog{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: conic-gradient(
+        #FE9844 calc(var(--percentage) * 1%), 
+        #cecece 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cal-circ-prog::before{
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #E3E2E6;
+}
+
+.circ-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circ-title{
+    font-family: "caros-medium";
+    font-size: 1.3rem;
+}
+
+.circ-val{
+    font-family: "caros-bold";
+    font-size: 3.5rem;
+}
+
+.circ-goal{
+    font-family: "caros-medium";
+    font-size: 0.8rem;
+}
+
+.nutri-containers{
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.nutri-card-val{
+    flex: 1;
+    border-radius: 15px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 8rem;
+    justify-content: space-between;
+}
+
+.nutri-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nutri-card{
+    width: 100%;
+    flex: 1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nutri-vals-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title-nutri{
+    font-size: 1.2rem;
+}
+
+.nutri-val-goal{
+    display: flex;
+    justify-content: space-between;
+    font-family: "caros-bold";
+    align-items: flex-end;
+}
+
+.nutri-vals{
+    font-size: 2.5rem;
+} */
+
+
+/* .prog-circ-container{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: conic-gradient(
+        #FE9844 calc(var(--percentage) * 1%), 
+        #cecece 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.prog-circ-container::before{
+    content: "";
+    width: 60%;
+    height: 60%;
+    border-radius: 50px;
+    background-color: white;
+} */
+
+/* 
+@media (min-width: 768px){
+    .page-container.mp{
+        margin-right: 386px;
+    }
+
+    .meal-prep-macros-container{
+        display: none;
+    }
+}
+ */

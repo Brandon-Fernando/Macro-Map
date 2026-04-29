@@ -1,0 +1,145 @@
+.navbar-container-mobile{
+    position: fixed;
+    bottom: 0.5rem;
+    width: auto;
+    background-image: linear-gradient(to bottom, #f4f2f285, #dcdbdb83);
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.2rem;
+    border-radius: 50px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    border-top: 1px solid white;
+    backdrop-filter: blur(20px);
+    z-index: 20;
+}
+
+.navbar-content-mobile{
+    display: flex;
+    position: relative;
+}
+
+.options-slider{
+    position: absolute;
+    height: 100%;
+    background-color: #FE9844;
+    border-radius: 50px;
+}
+
+.nav-option{
+    width: 4.5rem;
+    border-radius: 50px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+    transition: color 0.5s ease;
+    gap: 0.2rem;
+}
+
+.nav-option.active{
+    color: white;
+}
+
+.opt-title{
+    font-family: "caros-bold";
+    font-size: 0.65rem;
+}
+
+.nav-icon{
+    width: 1rem;
+}
+
+/* NAVBAR DESKTOP (TABLET) */
+.navbar-container-desktop{
+    background-color: #F3F2F7;
+    height: 100dvh;
+    width: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 1rem 1rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-border{
+    display: flex;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    border-radius: 20px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.235);
+}
+
+.navbar-content-desktop{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.nav-option-desktop{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+    font-family: "caros-bold";
+    font-size: 0.7rem;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0.2rem 0.5rem;
+}
+
+.nav-option-desktop img{
+    width: 1rem;
+    height: 1rem;
+
+}
+
+.navbar-content-bg{
+    padding: 0.5rem 0.3rem;
+}
+
+
+.nav-option-desktop.active{
+    color: white;
+}
+
+.navbar-content-bg.active {
+    background: #FE9844;
+    border-radius: 50px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  }
+
+.logout-nav{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+    background-color: #FE9844;
+    padding: 0.6rem 0;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    font-family: "caros-bold";
+}
+
+

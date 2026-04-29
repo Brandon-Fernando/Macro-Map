@@ -1,0 +1,242 @@
+/* CONTAINER  */
+.container{
+    width: 100%;
+    height: 100dvh;
+    background-color: #FFE5CF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2.5rem 2rem;
+}
+
+/* BACKGROUND GRADIENT  */
+.bg-gradient-container{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.circs{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.circ1{
+    width: 95vw;
+    height: 80vh;
+    background: #FF7300;
+    top: 10%;
+    left: 20%;
+}
+
+.circ2{
+    width: 95vw;
+    height: 80vh;
+    background: #FF7300;
+    top: 90%;
+    left: 80%;
+}
+
+/* BODY CONTAINER  */
+.home-body-container{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-title{
+    color: white;
+    font-family: "Thunder-BlackLC";
+    text-transform: uppercase;
+    font-size: 70px;
+    /* text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235); */
+}
+
+.register-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 20rem;
+}
+
+@media (min-width: 1024px) {
+    .circ{
+        filter: blur(110px);
+        opacity: 1;
+    }
+
+    .container{
+        background-color: #F3F2F7;
+        padding: 1.5rem;
+    }
+}
+
+/* HOME DESKTOP */
+.home-desktop-body-container{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.home-navbar{
+    width: 100%;
+    /* height: 5rem; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-desktop-buttons{
+    display: flex;
+    width: 20rem;
+    gap: 0.5rem;
+}
+
+.hero-body{
+    flex: 1;
+    margin: 6rem 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text{
+    height: 80%;
+    width: 100%;
+    background-color: #FFD1AC;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+.bg-dashboard-container{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 30px;
+}
+
+.circ-one{
+    width: 30vw;
+    height: 60vh;
+    background: #FF7300;
+    top: 50%;
+    left: 30%;
+}
+
+.circ-two{
+    width: 30vw;
+    height: 60vh;
+    background: #FF7300;
+    top: 50%;
+    left: 70%;
+}
+
+
+
+.hero-titles{
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title{
+    font-family: "Thunder-BlackLC";
+    font-size: 90px;
+    color: white;
+}
+
+.hero-subtitle{
+    font-family: "caros-bold";
+    color: white;
+    max-width: 30rem;
+}
+
+.hero-info{
+    border-radius: 40px;
+    height: 40%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(238, 238, 238, 0.35),
+        rgba(208, 208, 208, 0.35)
+    );
+
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.235)
+}
+
+.hero-info-cards{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+}
+
+.hero-info-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 12rem;
+    text-align: center;
+    gap: 0.3rem;
+    height: 6rem;
+    align-items: center;
+}
+
+.info-title{
+    font-family: "caros-bold";
+    color: #737373;
+}
+
+.info-subtitle{
+    font-family: "caros-medium";
+    color: #949494;
+    font-size: 0.77rem;
+}
+
+.hero-info-icon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    background-color: #E3AC7D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFCEA7;
+}

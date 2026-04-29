@@ -1,0 +1,303 @@
+/* CALENDAR  */
+.log-calendar-container{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.left-right{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #FE9844;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.log-calendar-card{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "caros-medium";
+    padding: 0.8rem 0.2rem;
+    border-radius: 20px;
+}
+
+.log-day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.day-name{
+    font-size: 0.65rem;
+}
+
+.day-circle{
+    border-radius: 50px;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-circle span{
+    font-size: 0.6rem;
+}
+
+
+/* LOG BUTTONS  */
+.log-buttons-container{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.log-card{
+    flex: 1;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    border-radius: 20px;
+    padding: 0.8rem 0;
+}
+
+.log-card img{
+    height: 33px;
+}
+
+.log-card-label{
+    font-family: "caros-medium";
+    font-size: 0.7rem;
+}
+
+.log-card-cal{
+    font-family: "caros-medium";
+    font-size: 0.55rem;
+    color: #cecece;
+}
+
+.log-card-add{
+    width: 1rem;
+    height: 1rem;
+    background-color: #FE9844;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+/* LOG MODAL  */
+.log-modal-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* flex: 1; */
+    /* gap: 1rem; */
+    height: 100%; /* full height of modal */
+    min-height: 0;
+    min-height: 0;
+    padding-top: 2rem;
+    position: relative;
+}
+.log-meal-header{
+    display: flex;
+    height: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+    height: 4rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        transparent
+    );
+}
+
+.meal-type-header{
+    display: flex;
+    position: relative;
+}
+
+
+/* LOGGED MEALS  */
+.logged-meals-container{
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 0.1rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.log-food-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 4rem;
+}
+
+/* SEARCH  */
+.log-search-container{
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    flex: 1;
+    min-height: 0;
+    padding-top: 4rem;
+}
+
+.log-searchbar{
+    height: 4rem;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        transparent
+    );
+}
+
+.search-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+    min-height: 0;
+    padding-top: 3rem;
+}
+
+
+/* LOGGED TOTALS */
+.logged-totals-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    border-radius: 20px;
+    gap: 1rem;
+}
+
+.logged-circs{
+    display: flex;
+    align-items: center;
+
+}
+
+.logged-circ-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 0.4rem;
+}
+
+.logged-vals{
+    display: flex;
+    flex-direction: column;
+}
+
+.logged-val-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    align-items: center;
+}   
+
+.logged-val-list-icon{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logged-val-list:not(:last-child) {
+    border-bottom: 1px solid #cecece;
+}
+
+
+/* SAVED MEALS  */
+.saved-log-meals-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0 0.1rem;
+    padding-top: 0.5rem;
+}
+
+.saved-lm-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.saved-lm-title-cal{
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+}
+
+.saved-add{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border-radius: 50px;
+}
+
+.log-sidebar-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* flex: 1; */
+    /* gap: 1rem; */
+    height: 100%; /* full height of modal */
+    min-height: 0;
+    min-height: 0;
+    padding-top: 1rem;
+    position: relative;
+}
+
+@media (min-width: 768px){
+    .logged-totals-container{
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .logged-val-list{
+        padding: 1rem 0rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .logged-totals-container{
+        padding: 1rem;
+        padding-bottom: 0.5rem;
+    }
+}

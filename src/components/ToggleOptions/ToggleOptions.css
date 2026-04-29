@@ -1,0 +1,34 @@
+.toggle-options-container{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: #cecece;
+    display: flex;
+    position: relative;
+    /* overflow: hidden; */
+    font-family: "caros-medium";
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    
+}
+
+.option-slider{
+    position: absolute;
+    background-color: #FE9844;
+    height: 100%;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.235); */
+}
+
+.option-card{
+    height: 100%;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    z-index: 1;
+    transition: color 0.25s ease;
+    color: white;
+    cursor: pointer;
+}

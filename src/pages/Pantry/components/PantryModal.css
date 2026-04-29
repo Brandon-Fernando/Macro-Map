@@ -1,0 +1,217 @@
+/* ===== FOOD SEARCH ===== */
+.food-search-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    width: 100%;
+    padding-top: 1.7rem;
+    position: relative;
+}
+
+.food-search-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.food-search-body{
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 2px;
+    padding-top: 3rem;
+}
+
+.food-search-body {
+    overflow: scroll;
+    scrollbar-width: none; 
+}
+  
+.food-search-body::-webkit-scrollbar {
+    display: none; 
+}
+
+.search-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.modal-title{
+    flex: 1;
+    text-align: center;
+}
+
+.angle{
+    position: absolute;
+    right: 0;
+    color: #cecece;
+}
+
+/* ===== PANTRY LIST ===== */
+.pantrylist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 0.5rem;
+}
+
+.pantry-item-card{
+    height: 6rem;
+    border-radius: 20px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-serv{
+    display: flex;
+    flex-direction: column;
+}
+
+.pantry-item-title{
+    font-family: "caros-bold";
+    font-size: 0.63rem;
+}
+
+.pantry-item-serv{
+    font-family: "caros-medium";
+    font-size: 0.6rem;
+    color: #cecece;
+}
+
+.cal-arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.pantry-item-cal{
+    font-family: "caros-medium";
+    font-size: 0.8rem;
+}
+
+.arrow{
+    color: #FE9844;
+}
+
+/* ===== FOOD SEARCH RESULTS ===== */
+.food-searchbar{
+    position: absolute;
+    width: 100%;
+    height: 3.5rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        rgba(243, 242, 247), 
+        transparent
+    );
+}
+
+.food-search-results-container{
+    width: 100%;
+}
+
+
+.search-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    /* padding-bottom: 2rem; */
+}
+
+.search-result-card{
+    height: 3.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: 0 0.3rem;
+    cursor: pointer;
+}
+
+.search-title-serv{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-cal-arrow{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.ang{
+    color: #cecece;
+}
+
+
+/* SHOW MORE  */
+.show-more-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.show-more{
+    background-color: #FE9844;
+    color: white;
+    font-family: "caros-medium";
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.235);
+    cursor: pointer;
+}
+
+/* LOAD SUCCESS  */
+.load-success-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.load-success-container::-webkit-scrollbar {
+    display: none; 
+}
+
+/* MODAL*/
+.modal-footer-update{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.modal-update{
+    flex: 1;
+}
+
+.trash{
+    width: 3rem;
+    height: 3rem;
+    background-color: #DADADA;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B5B5B5;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.235);
+    cursor: pointer;
+}
