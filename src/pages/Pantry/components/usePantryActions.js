@@ -22,8 +22,11 @@ export default function usePantryAction(setModalOpen){
 	// SEARCH FOOD
 	const handleSearch = async () => {
 		try{
+			// const res = await axios.get(
+			// 	`http://localhost:5050/api/food/search?query=${query}`
+			// );
 			const res = await axios.get(
-				`http://localhost:5050/api/food/search?query=${query}`
+				`${import.meta.env.VITE_API_URL}/api/food/search?query=${encodeURIComponent(query)}`
 			);
 
 			const foods = res.data.foods?.food;
@@ -37,7 +40,8 @@ export default function usePantryAction(setModalOpen){
 	const getNutrition = async (foodId, setView) => {
 		try{
 			const res = await axios.get(
-				`http://localhost:5050/api/food/${foodId}`
+				// `http://localhost:5050/api/food/${foodId}`
+				`${import.meta.env.VITE_API_URL}/api/food/${foodId}`
 			);
 
 			setSelectedFood(res.data);
