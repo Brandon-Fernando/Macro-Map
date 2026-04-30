@@ -2,13 +2,21 @@ import { useState } from "react";
 import Button from "../../components/Buttons/Button";
 import QuizQuestions from "./QuizQuestions";
 import { motion, AnimatePresence } from "framer-motion";
-import { slideFromBottom } from "../../animations/motionVariants";
+import { slideFromBottom, containerVariants, itemVariants } from "../../animations/motionVariants";
 import { springVariant } from "../../animations/motionVariants";
 import { calculateCaloriesAndMacros } from "./utils/quizUtils";
 import { useNavigate } from "react-router-dom";
 import LoadSuccess from "../../components/LoadSuccess/LoadSuccess";
 import { useQuiz } from "../../context/QuizContext";
 import useIsDesktopHorizontal from "../../hooks/useIsDesktopHorizontal";
+import Icons from "../../components/Icons/Icons";
+
+const MACROS = [
+	{ label: "Calories", icon: "fa-solid fa-fire"}, 
+	{ label: "Protein", icon: "fa-solid fa-drumstick-bite"}, 
+	{ label: "Carbs", icon: "fa-solid fa-wheat-awn"}, 
+	{ label: "Fat", icon: "fa-solid fa-droplet"}
+]
 
 const questions = [
 	{ name: "Title", label: "A few quick questions before we start!", type: "none"},
@@ -46,7 +54,7 @@ const QuizContent = () => {
 	const [step, setStep] = useState(isDesktopHorizontal ? 1 : 0);
 	const [isSaving, setIsSaving] = useState(false);
 	const [isLoading, setIsLoading] = useState(false)
-	const { saveQuiz } = useQuiz();
+	const { saveQuiz, quizData } = useQuiz();
 	const navigate = useNavigate()
 
 	const handleNext = () => {
@@ -95,14 +103,53 @@ const QuizContent = () => {
 
 	if(isSaving){
 		return(
-			<div className="quiz-content-container">
-				<LoadSuccess 
-					isLoading={isLoading}
-					isQuiz
-					dark
-					path="/dashboard"
-				/>
-			</div>
+			isLoading ? (
+				<div className="quiz-content-container">
+					<img src="/Logo/Logo.svg" alt="Logo" className="main-logo"/>
+
+					<LoadSuccess 
+						isLoading={isLoading}
+						isQuiz
+						dark
+						// path="/dashboard"
+					/>
+				</div>
+			) : (
+				<motion.div 
+					className="quiz-content-container"
+					variants={containerVariants}
+					initial="hidden"
+					animate="visible"
+				>
+					<motion.img variants={itemVariants} src="/Logo/Logo.svg" alt="Logo" className="main-logo"/>
+
+					<div className="macro-map-container">
+						<motion.span variants={itemVariants} className="quiz-title">Your Macro Map</motion.span>
+
+						<div className="macro-map">
+							{MACROS.map((macro) => (
+								<motion.div 
+									className="map-card"
+									key={macro.label}
+									variants={itemVariants}
+								>
+									<Icons size={"M"} icon={macro.icon}/>
+
+									<span className="main-reg-title">{macro.label}</span>
+
+									<span className="main-bold-title-map">{quizData?.results[macro.label.toLowerCase()]} {macro.label === "Calories" ? "" : "g"}</span>
+								</motion.div>
+							))}
+						</div>
+
+						
+					</div>
+
+					<motion.div variants={itemVariants} className="macro-map-button">
+						<Button type={"tertiary"} text="Continue" handleClick={() => navigate("/dashboard")}/>
+					</motion.div>
+				</motion.div>
+			)
 		)
 	}
 
