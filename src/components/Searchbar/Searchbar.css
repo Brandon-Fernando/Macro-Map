@@ -19,7 +19,8 @@
     padding: 0.8rem;
     padding-left: 2.8rem;
     font-family: "caros-medium";
-    font-size: 0.7rem;
+    font-size: 16px;
     border-radius: 50px;
     box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.235);
+    background-color: white;
 }
