@@ -50,7 +50,7 @@ const SavedMealsList = ({meals, setMeal, setModal, setMealEdit}) => {
 				<motion.div 
 					onClick={() => handleShowRecipe(meal.items)}
 					className="saved-meals-card card-design"
-					key={meal.items.title}
+					key={meal.id}
 				>
 					<div className="saved-title-cal">
 						<span className="main-bold-subtitle">{meal.items.title}</span>

@@ -1,4 +1,4 @@
-.app-container {
+/* .app-container {
     display: flex;
     min-height: 100dvh;
     width: 100%;
@@ -9,7 +9,7 @@
     flex: 1;
     overflow: auto;
     min-height: 100dvh;
-  }
+  } */
 
   /* .app-container {
     height: 100vh;
@@ -22,3 +22,16 @@
     height: 100vh;
     overflow-y: auto;
   } */
+
+  .app-container {
+    display: flex;
+    height: 100dvh;
+    width: 100%;
+  }
+  
+  .content {
+    flex: 1;
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
