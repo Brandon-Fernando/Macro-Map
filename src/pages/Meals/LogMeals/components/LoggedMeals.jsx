@@ -33,10 +33,10 @@ const LoggedMeals = ({setView, setFoodEdit, mealType}) => {
 
 			{loggedFoods.length > 0 && (
 				<div className="log-food-container">
-					<LoggedTotals 
+					{/* <LoggedTotals 
 						nutritionalFacts={getMealTypeTotals(mealType)}
-					/>
-					{/* <Macros nutritionalFacts={getMealTypeTotals(mealType)}/> */}
+					/> */}
+					<Macros nutritionalFacts={getMealTypeTotals(mealType)}/>
 					
 					<span className="main-reg-subtitle">Logged Food</span>
 				

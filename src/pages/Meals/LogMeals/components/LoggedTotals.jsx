@@ -1,6 +1,7 @@
 import Icon from "../../../../components/Icon/Icon";
 import ProgressBarCircle from "../../../../components/NutrientInfo/ProgressBarCircle";
 import { useQuiz } from "../../../../context/QuizContext";
+import ProgressCircle from "../../../../components/Progress/ProgressCircle";
 
 const NUTRI = [
 	{ label: "Calories", icon: "fa-solid fa-fire"}, 
@@ -9,52 +10,72 @@ const NUTRI = [
 	{ label: "Fat", icon: "/NutriIcons/Fat-Gray.svg"}
 ];
 
+const MACROS = ["Calories", "Protein", "Carbs", "Fat"];
+
 const LoggedTotals = ({nutritionalFacts}) => {
 	const { quizData } = useQuiz();
 
 	return(
-		<div className="logged-totals-container card-design">
-			{/* PROGRESS CIRCLES  */}
-			<div className="logged-circs">
-				{NUTRI.map((nutri) => {
-					const currentProgress = nutritionalFacts[nutri.label.toLowerCase()];
-					const goal = quizData?.results[nutri.label.toLowerCase()];
+		// <div className="logged-totals-container card-design">
+		// 	PROGRESS CIRCLES 
+		// 	<div className="logged-circs">
+		// 		{NUTRI.map((nutri) => {
+		// 			const currentProgress = nutritionalFacts[nutri.label.toLowerCase()];
+		// 			const goal = quizData?.results[nutri.label.toLowerCase()];
 
-					return(
-						<div 
-							key={nutri.label}
-							className="logged-circ-label"
-						>
-							<ProgressBarCircle size="S" currentProgress={currentProgress} goal={goal}/>
+		// 			return(
+		// 				<div 
+		// 					key={nutri.label}
+		// 					className="logged-circ-label"
+		// 				>
+		// 					<ProgressBarCircle size="S" currentProgress={currentProgress} goal={goal}/>
 
-							<span className="main-reg-subtitle-s">{nutri.label}</span>
-						</div>
-					)
-				})}
-			</div>
+		// 					<span className="main-reg-subtitle-s">{nutri.label}</span>
+		// 				</div>
+		// 			)
+		// 		})}
+		// 	</div>
 
-			{/* PROGRESS VALUES  */}
-			<div className="logged-vals">
-				{NUTRI.map((n) => (
-					<div 
-						className="logged-val-list"
-						key={n.label}
-					>
-						<div className="logged-val-list-icon">
-							<Icon 
-								size={"M"}
-								type={n.label === "Calories" ? "" : "img"}
-								icon={n.icon}
-							/>
+		// 	PROGRESS VALUES 
+		// 	<div className="logged-vals">
+		// 		{NUTRI.map((n) => (
+		// 			<div 
+		// 				className="logged-val-list"
+		// 				key={n.label}
+		// 			>
+		// 				<div className="logged-val-list-icon">
+		// 					<Icon 
+		// 						size={"M"}
+		// 						type={n.label === "Calories" ? "" : "img"}
+		// 						icon={n.icon}
+		// 					/>
 
-							<span className="main-bold-subtitle">{nutritionalFacts[n.label.toLowerCase()]} g</span>
-						</div>
+		// 					<span className="main-bold-subtitle">{nutritionalFacts[n.label.toLowerCase()]} g</span>
+		// 				</div>
 						
-						<span className="reg-subtitle">{n.label}</span>
+		// 				<span className="reg-subtitle">{n.label}</span>
+		// 			</div>
+		// 		))}
+		// 	</div>
+		// </div>
+		<div className="db-log-prog log-ttls card-design">
+				{MACROS.map((macro) => (
+					<div
+						key={macro}
+						className="db-log-val"
+					>
+						<ProgressCircle 
+							size={"SM"}
+							title={nutritionalFacts[macro.toLowerCase()]}
+							subtitle={macro === "Calories" ? "kcal" : "g"}
+							currentProgress={nutritionalFacts[macro.toLowerCase()]}
+							goal={quizData?.results[macro.toLowerCase()]}
+						/>
+
+						<span className="db-log-val-title">{macro}</span>
 					</div>
 				))}
 			</div>
-		</div>
 	)
 }
 

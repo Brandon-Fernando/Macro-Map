@@ -20,7 +20,7 @@ const LogModal = ({setModalOpen, mealType}) => {
 
 	const pantry = usePantryAction(setModalOpen);
 
-	const {selectedFood, handleLogFood, handleUpdateLogFood, isSaving, loading, handleDeleteLogFood} = pantry;
+	const {selectedFood, handleLogFood, handleUpdateLogFood, isSaving, loading, handleDeleteLogFood, isSearching} = pantry;
 
 	const footer = 
 	currentView === "nutrients" ? (

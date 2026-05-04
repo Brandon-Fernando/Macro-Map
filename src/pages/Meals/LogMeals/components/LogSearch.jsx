@@ -8,6 +8,7 @@ import SavedMealsList from "../../SavedMeals/components/SavedMealsList";
 import "../LogMeals.css";
 import { useMealContext } from "../../../../context/MealContext";
 import SavedMealsLog from "./SavedMealsLog";
+import LoadSuccess from "../../../../components/LoadSuccess/LoadSuccess";
 
 const LogSearch = ({ setModalOpen, setView, pantry, mealType}) => {
 
@@ -17,7 +18,8 @@ const LogSearch = ({ setModalOpen, setView, pantry, mealType}) => {
 		selectedFood, 
 		query, 
 		setQuery, 
-		results
+		results, 
+		isSearching
 	} = pantry;
 
 	const { savedRecipes } = useMealContext();
@@ -36,7 +38,7 @@ const LogSearch = ({ setModalOpen, setView, pantry, mealType}) => {
 			
 
 			<div className="search-body">
-				{results.length === 0 && (
+				{results.length === 0 && !isSearching && (
 					<div className="empty-body-container">
 						<EmptyState 
 							icon={"/EmptyState/Search.svg"}
@@ -45,6 +47,15 @@ const LogSearch = ({ setModalOpen, setView, pantry, mealType}) => {
 						/>
 					</div>
 				)}
+
+				{isSearching && (
+					<div className="load-success-container">
+						<LoadSuccess 
+							isLoading={isSearching}
+							dark
+						/>
+					</div>
+				)}	
 
 				{results.length > 0 && (
 					<FoodSearchResults

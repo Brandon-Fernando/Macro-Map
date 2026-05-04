@@ -27,7 +27,8 @@ const PantrySidebar = ({setModal, type, setType, selectedFoods}) => {
 		query, 
 		setQuery, 
 		results, 
-		selectedFood
+		selectedFood, 
+		isSearching
 	} = usePantryAction(setModal)
 
 	const footer =
@@ -106,6 +107,7 @@ const PantrySidebar = ({setModal, type, setType, selectedFoods}) => {
 					setQuery={setQuery}
 					results={results}
 					selectedFood={selectedFood}
+					isSearching={isSearching}
 				/>
 			)}
 

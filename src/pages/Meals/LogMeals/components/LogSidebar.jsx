@@ -21,7 +21,7 @@ const LogSidebar = ({setModal, mealType, currentView, setCurrentView}) => {
 
 	const pantry = usePantryAction(setModal);
 
-	const { selectedFood, handleLogFood, handleUpdateLogFood, isSaving, loading, handleDeleteLogFood} = pantry;
+	const { selectedFood, handleLogFood, handleUpdateLogFood, isSaving, loading, handleDeleteLogFood, isSearching} = pantry;
 
 	const footer = 
 	currentView === "nutrients" ? (

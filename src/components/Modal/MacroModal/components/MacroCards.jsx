@@ -7,9 +7,9 @@ import useIsDesktop from "../../../../hooks/useIsDesktop"
 import ProgressCircle from "../../../Progress/ProgressCircle"
 
 const NUTRI = [
-	{label: "Protein", icon: "/NutriIcons/Protein-Gray.svg"}, 
-	{label: "Carbs", icon: "/NutriIcons/Carbs-Gray.svg"}, 
-	{label: "Fat", icon: "/NutriIcons/Fat-Gray.svg"}
+	{label: "Protein", icon: "/Macros/Protein.svg"}, 
+	{label: "Carbs", icon: "/Macros/Carbs.svg"}, 
+	{label: "Fat", icon: "/Macros/Fat.svg"}
 ]
 
 const MacroCards = ({nutritionalFacts, isLogModal}) => {
@@ -24,7 +24,7 @@ const MacroCards = ({nutritionalFacts, isLogModal}) => {
 					<span className="main-reg-title">Calories</span>
 
 					<div className="cal-card-icon-val">
-						<Icon icon={"fa-solid fa-fire"} size="L"/>
+						<Icon icon={"/Macros/Calories.svg"} size="L" type={"img"}/>
 
 						<div className="cal-card-val-unit">
 							<span className="cal-val">
@@ -40,7 +40,16 @@ const MacroCards = ({nutritionalFacts, isLogModal}) => {
 					</div>
 				</div>
 
-				<ProgressCircle currentProgress={29} goal={200} title={2876} subtitle={"Goal"}/>
+				<ProgressCircle 
+					currentProgress={
+						isLogModal
+						? nutritionalFacts.calories
+						: nutritionalFacts[0].value
+					} 
+					goal={quizData?.results["calories"]} 
+					title={quizData?.results["calories"]} 
+					subtitle={"Goal"}
+				/>
 			</div>
 
 			{/* PROTEIN, CARBS, AND FAT  */}

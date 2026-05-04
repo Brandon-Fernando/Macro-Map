@@ -10,6 +10,8 @@ import GenerateSidebar from "./components/GenerateSidebar";
 import { async } from "@firebase/util";
 import { containerVariants, itemVariants } from "../../../animations/motionVariants";
 import GenerateModal from "./components/GenerateModal";
+import { usePantryContext } from "../../../context/PantryContext";
+import NoPantryModal from "./components/NoPantryModal";
 
 const GenerateMeals = () => {
 	const isDesktopHorizontal = useIsDesktopHorizontal();
@@ -18,8 +20,11 @@ const GenerateMeals = () => {
 	const [activeType, setActiveType] = useState("");
 	const [isLoading, setIsLoading] = useState(true);
 	const [showError, setShowError] = useState(false);
+	const [noPantryModal, setNoPantryModal] = useState(false)
 
 	const {pantryRecipe, generatePantryRecipe, randomRecipe, generateRandomRecipe} = useMealContext();
+
+	const { pantryData } = usePantryContext();
 
 	useEffect(() => {
 		if (!showError) return;
@@ -32,16 +37,20 @@ const GenerateMeals = () => {
 	}, [showError]);
 	
 	const handlePantryGen = async () => {
-		setIsLoading(true)
-		setActiveType("pantry")
-		setModalOpen(true)
-		
-		try{
-			await generatePantryRecipe()
-		} catch (error) {
-			console.error(error)
-		} finally {
-			setIsLoading(false)
+		if(pantryData.length === 0){
+			setNoPantryModal(true);
+		} else{
+			setIsLoading(true)
+			setActiveType("pantry")
+			setModalOpen(true)
+			
+			try{
+				await generatePantryRecipe()
+			} catch (error) {
+				console.error(error)
+			} finally {
+				setIsLoading(false)
+			}
 		}
 	}
 
@@ -132,6 +141,12 @@ const GenerateMeals = () => {
 						activeType={activeType}
 						setModal={setModalOpen}
 						setIsSelected={setIsSelected}
+					/>
+				)}
+
+				{noPantryModal && (
+					<NoPantryModal 
+						setModal={setNoPantryModal}
 					/>
 				)}
 			</AnimatePresence>

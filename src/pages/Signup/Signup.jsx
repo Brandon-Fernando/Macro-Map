@@ -24,12 +24,15 @@ const Signup = () => {
 				</div>
 
 				{/* BACK BUTTON  */}
-				<div className="back-button-signin-container" onClick={() => navigate("/")}>
+				{/* <div className="back-button-signin-container" onClick={() => navigate("/")}>
 					<div className="back-button">
 						<i className="fa-solid fa-angle-left"></i>
 					</div>
 
 					<span>Back</span>
+				</div> */}
+				<div className="login-back">
+					<BackButton color={"white"} handleClick={() => navigate("/")}/>
 				</div>
 
 				{/* TITLE */}

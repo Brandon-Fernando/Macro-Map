@@ -18,25 +18,25 @@ export default function usePantryAction(setModalOpen){
 	const { savePantry, deletePantryItem, updatePantry } = usePantryContext();
 	const {logFood, updateLogFood, deleteLogFood} = useLogContext();
 	const { saveRecipe, saveMealPrep, deleteMealPrep, deleteRecipe, updateMealPrepTitle } = useMealContext();
+	const [ isSearching, setIsSearching ] = useState(false);
 
 	// SEARCH FOOD
 	const handleSearch = async () => {
+		setIsSearching(true);
+
 		try{
-			// const res = await axios.get(
-			// 	`http://localhost:5050/api/food/search?query=${query}`
-			// );
-			console.log(
-				"FULL SEARCH URL:",
-				`${import.meta.env.VITE_API_URL}/api/food/search?query=${encodeURIComponent(query)}`
-			);
+			console.log("searching...")
 			const res = await axios.get(
 				`${import.meta.env.VITE_API_URL}/api/food/search?query=${encodeURIComponent(query)}`
 			);
 
 			const foods = res.data.foods?.food;
+			console.log(foods)
 			setResults(Array.isArray(foods) ? foods : foods ? [foods] : []);
 		} catch (error) {
-			console.error(error);
+			console.error("error searching", error);
+		} finally {
+			setIsSearching(false)
 		}
 	}
 
@@ -332,7 +332,8 @@ export default function usePantryAction(setModalOpen){
 		successText, 
 		handleDeleteSaveMealPreps, 
 		handleDeleteRecipe, 
-		handleUpdateMealPrepTitle
+		handleUpdateMealPrepTitle, 
+		isSearching
 	}
 
 }

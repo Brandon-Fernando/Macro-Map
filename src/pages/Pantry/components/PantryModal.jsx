@@ -28,7 +28,8 @@ const PantryModal = ({setModal, type, setType, selectedFoods, mealType}) => {
 		query, 
 		setQuery,
 		results, 
-		selectedFood
+		selectedFood, 
+		isSearching
 	} = usePantryAction(setModal);
 
 
@@ -102,7 +103,7 @@ const PantryModal = ({setModal, type, setType, selectedFoods, mealType}) => {
 					setQuery={setQuery}
 					results={results}
 					selectedFood={selectedFood}
-
+					isSearching={isSearching}
 				/>
 			)}
 

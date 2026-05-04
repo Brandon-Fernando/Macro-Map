@@ -328,3 +328,14 @@ export const generateVariant = {
     transition: {duration: 0.5}
   }
 }
+
+// NAVBAR ANIMATION 
+export const navBar = {
+  hover: { 
+    scale: 1.05, 
+    transition: { duration: 0.3}
+  }, 
+  tap: {
+    scale: 0.85
+  }
+}

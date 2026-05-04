@@ -42,13 +42,17 @@ export default function Layout({ children }) {
   const contentRef = useRef(null);
   const isDesktop = useIsDesktop();
 
+  // useLayoutEffect(() => {
+  //   contentRef.current?.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: "auto",
+  //   });
+  // }, [location.key]);
+  
   useLayoutEffect(() => {
-    contentRef.current?.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "auto",
-    });
-  }, [location.key]);
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="app-container">

@@ -23,37 +23,18 @@ const FoodSearch = ({setModalOpen,
 	query, 
 	setQuery, 
 	results,
-	selectedFood
+	selectedFood, 
+	isSearching
 }) => {
 	const {savePantry} = usePantryContext();
 	const [view, setView] = useState("");
-
-	
-
-	// const {
-	// 	handleSearch,
-	// 	getNutrition, 
-	// 	handleAddFood,
-	// 	selectedFood, 
-	// 	// showNutrients, 
-	// 	// setShowNutrients,
-	// 	query, 
-	// 	setQuery, 
-	// 	results, 
-	// 	setResults, 
-	// } = usePantryAction(setModalOpen)
 	
 
 	useEffect(() => {
     if (showNutrients) {
         setSearchFooter(true);
-				
-				// setBackPath(() => setShowNutrients(false))
     } else {
 			setSearchFooter(false)
-			// if(setIsNutrients === false){
-			// 	setShowNutrients(false)
-			// }
 		}
 	}, [showNutrients, setSearchFooter, setShowNutrients]);
 
@@ -61,13 +42,10 @@ const FoodSearch = ({setModalOpen,
 	if(showNutrients){
 		return(
 			<MacroModal 
-				// showBack
-				// setBackPath={() => setShowNutrients(false)}
 				setModalOpen={setModalOpen}
 				isAdd
 				food={selectedFood}
 				setFinalFood={setFinalFood}
-				// handleButton={handleAddFood}
 			/>
 		)
 	}
@@ -98,7 +76,16 @@ const FoodSearch = ({setModalOpen,
 				
 			</div>
 
-			{results.length === 0 && (
+			{isSearching && (
+				<div className="load-success-container">
+					<LoadSuccess 
+						isLoading={isSearching}
+						dark
+					/>
+				</div>
+			)}
+
+			{results.length === 0 && !isSearching && (
 				<motion.div variants={itemVariants} className="empty-body-container">
 					<EmptyState 
 						icon={"/EmptyState/Search.svg"}
@@ -108,7 +95,7 @@ const FoodSearch = ({setModalOpen,
 				</motion.div>
 			)}
 			
-			<div className="food-search-body">
+			<motion.div variants={itemVariants} className="food-search-body">
 
 				{results.length > 0 && (
 					<div className="food-search-results-container">
@@ -122,7 +109,7 @@ const FoodSearch = ({setModalOpen,
 					</div>
 					
 				)}
-			</div>
+			</motion.div>
 			
 
 

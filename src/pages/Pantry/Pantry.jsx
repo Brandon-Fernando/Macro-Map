@@ -37,7 +37,7 @@ const Pantry = () => {
 	return(	
 		<div className="page-layout-sidebar">
 			<motion.div
-				className="page-container"
+				className={`page-container ${isDesktop ? "desktop" : ""}`}
 				animate={{
 					marginRight: modalOpen && isDesktopHorizontal ? "386px" : "0px"
 				}}

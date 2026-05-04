@@ -33,11 +33,14 @@ const MealPrepDashboard = () => {
     <div className="meal-prep-dashboard-container card-design">
       {/* HEADER  */}
       <div className="mp-dash-header">
-        <Icons icon="fa-solid fa-utensils" size={"S"}/>
+        <span className="main-bold-title">Meal Prep</span>
 
-        <span className="main-reg-title">Meal Prep</span>
-
-        <i className="fa-solid fa-angle-right db-ang"></i>
+        <div
+         className="db-ang"
+         onClick={() => navigate("/meals/prep")}
+        >
+          <i className="fa-solid fa-angle-right"></i>
+        </div>
       </div>
 
       {!hasMealPrep && (
@@ -46,9 +49,6 @@ const MealPrepDashboard = () => {
             icon={"/EmptyState/MealPlan.svg"}
             title={"No Meal Prep"}
             subtitle={"Click to generate your meal plan."}
-            isButton
-            buttonText={"Generate"}
-            handleButton={() => navigate("/meals/prep")}
           />
         </div>
       )}

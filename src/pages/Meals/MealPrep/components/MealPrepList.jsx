@@ -11,9 +11,9 @@ const MEALS = [
 ]
 
 const NUTRI = [
-	{label: "Protein", icon: "/NutriIcons/Protein-White.svg"},
-	{label: "Carbs", icon: "/NutriIcons/Carbs-White.svg"}, 
-	{label: "Fat", icon: "/NutriIcons/Fat-White.svg"}
+	{label: "Protein", icon: "fa-solid fa-drumstick-bite"},
+	{label: "Carbs", icon: "fa-solid fa-wheat-awn"}, 
+	{label: "Fat", icon: "fa-solid fa-droplet"}
 ]
 
 const MealPrepList = ({mealPrep, setMealType, setModal, setMeal, setIsRecipe}) => {
@@ -27,76 +27,53 @@ const MealPrepList = ({mealPrep, setMealType, setModal, setMeal, setIsRecipe}) =
 	}
 
 	return(
-		// <div className="meal-prep-list-container">
-		// 	{MEALS.map((meal) => (
-		// 		<div className="meal-prep-list-card card-design">
-		// 			<span className="main-bold-title">{meal}</span>
-					
-		// 			<hr className="break"/>
-
-		// 			<div className="meal-prep-recipe-container" onClick={() => handleRecipeModal(meal)}>
-		// 				<span className="main-reg-subtitle meal-prep-title">{mealPrep[meal.toLowerCase()].title}</span>
-
-		// 				<div className="cal-angle">
-		// 					<span className="main-reg-subtitle">{mealPrep[meal.toLowerCase()].macros.calories} kcal</span>
-		// 					<i className="fa-solid fa-angle-right right"></i>
-		// 				</div>
-		// 			</div>
-		// 		</div>
-		// 	))}
-		// </div>
-
-		// <div className="meal-prep-list-container">
-		// 	{MEALS.map((meal) => (
-		// 		<div className="meal-prep-list-card card-design" onClick={() => handleRecipeModal(meal)}>
-		// 			<span className="main-bold-title">{meal}</span>
-
-		// 			<hr className="break"/>
-
-		// 			<div className="meal-recipe-container">
-		// 				<div className="meal-recipe-title-cal">
-		// 					<span className="main-bold-subtitle">{mealPrep[meal.toLowerCase()].title}</span>
-
-		// 					<span className="main-reg-subtitle">{mealPrep[meal.toLowerCase()].macros.calories} kcal</span>
-		// 				</div>
-
-		// 				<div className="meal-recipe-macros">
-		// 					{NUTRI.map((nutri) => (
-		// 						<div className="nutri-icon-val">
-		// 							{/* <img src={nutri.icon} alt={nutri.label} /> */}
-		// 							<Icon size="S" icon={nutri.icon} type="img"/>
-		// 							<span className="main-reg-subtitle">0.2 g</span>
-		// 						</div>
-		// 					))}
-		// 				</div>
-
-		// 				<i className="fa-solid fa-angle-right meal-ang"></i>
-		// 			</div>
-
-					
-		// 		</div>
-		// 	))}
-		// </div>
 		<div className="meal-prep-list-container">
 			{MEALS.map((meal) => (
-				<motion.div 
-					key={meal.label} 
-					className="meal-prep-list-card card-design" 
+				<motion.div
+					key={meal.label}
+					className="meal-prep-list-card card-design"
 					onClick={() => handleRecipeModal(meal)}
 					variants={buttonHoverClickVariant}
-					whileHover="hover"
-					whileTap="tap"
+					whileHover={"hover"}
+					whileTap={"tap"}
 				>
-					<div className="meal-prep-list-icon-label">
-						<img src={meal.icon} alt={meal.label} />
+					{/* MEAL TYPE AND CALORIES  */}
+					<div className="meal-type-cal">
+						<span className="main-bold-title">{meal.label}</span>
 
-						<div className="meal-prep-list-label-cal">
-							<span className="main-reg-title">{meal.label}</span>
-							<span className="main-light-title cal-sub">{mealPrep[meal.label.toLowerCase()].macros.calories} kcal</span>
+						<div className="cal-continue">
+							<span className="main-light-subtitle">{mealPrep[meal.label.toLowerCase()].macros.calories} kcal</span>
+
+							<div className="continue">
+								<i className="fa-solid fa-angle-right"></i>
+							</div>
 						</div>
 					</div>
-					
-					<i className="fa-solid fa-angle-right"></i>
+
+					<hr className="break"/>
+
+					{/* MEAL ICON AND MEAL  */}
+					<div className="meal-container">
+						<div className="meal-icon">
+							<img src={meal.icon} alt={meal.label} />
+						</div>
+
+						<div className="meal-title-macros">
+							<span className="main-bold-subtitle">{mealPrep[meal.label.toLowerCase()].title}</span>
+
+							<div className="meal-macro-container">
+								{NUTRI.map((nutri) => (
+									<div
+										className="meal-macro"
+									>
+										<i className={nutri.icon}></i>
+
+										<span>{mealPrep[meal.label.toLowerCase()].macros[nutri.label.toLowerCase()]} g</span>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
 				</motion.div>
 			))}
 		</div>

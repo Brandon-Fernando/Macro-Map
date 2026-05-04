@@ -2,13 +2,13 @@ import { useLocation } from "react-router-dom";
 import "./NavBar.css"
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { navSideBarVariants } from "../../animations/motionVariants";
+import { navBar } from "../../animations/motionVariants";
 
 const options = [
-  { label: "Home", path: "/dashboard", icon: "/NavIcons/Home.svg", iconFill: "/NavIcons/HomeFill.svg"},
-  { label: "Pantry", path: "/pantry", icon: "/NavIcons/Pantry.svg", iconFill: "/NavIcons/PantryFill.svg" },
-  { label: "Meals", path: "/meals", icon: "/NavIcons/Meal.svg", iconFill: "/NavIcons/MealFill.svg" },
-  { label: "Profile", path: "/profile", icon: "/NavIcons/Profile.svg", iconFill: "/NavIcons/ProfileFill.svg" },
+  { label: "Dashboard", path: "/dashboard", icon: "/NavBar/DashDark.svg", iconFill: "/NavBar/DashLight.svg"},
+  { label: "Pantry", path: "/pantry", icon: "/NavBar/PantryDark.svg", iconFill: "/NavBar/PantryLight.svg" },
+  { label: "Meals", path: "/meals", icon: "/NavBar/MealDark.svg", iconFill: "/NavBar/MealLight.svg" },
+  { label: "Profile", path: "/profile", icon: "/NavBar/UserDark.svg", iconFill: "/NavBar/UserLight.svg" },
 ];
 
 const NavBarDesktop = () => {
@@ -25,19 +25,19 @@ const NavBarDesktop = () => {
 				<div className="navbar-content-desktop">
 					{options.map((opt, index) => (
 						<motion.div
-							className={`navbar-content-bg ${activeIndex === index ? "active" : ""}`}
-							variants={navSideBarVariants}
-							animate={activeIndex === index ? "active" : "inactive"}
-							key={opt.label}
+							key={index}
+							variants={navBar}
+							whileHover="hover"
+							whileTap="tap"
 						>
 							<NavLink
-								key={index}
 								to={opt.path}
-								className={`nav-option-desktop ${activeIndex === index ? "active" : ""}`}
+								className={`nav-opt ${activeIndex === index ? "active" : ""}`}
 							>
-								<img src={activeIndex === index ? opt.iconFill : opt.icon} alt={opt.label} />
-
-								<span>{opt.label}</span>
+								<img
+									src={activeIndex === index ? opt.iconFill : opt.icon}
+									alt={opt.label}
+								/>
 							</NavLink>
 						</motion.div>
 					))}

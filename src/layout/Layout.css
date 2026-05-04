@@ -22,16 +22,32 @@
     height: 100vh;
     overflow-y: auto;
   } */
+  
+  :root {
+    --sidebar-width: 128px;
+  }
 
   .app-container {
     display: flex;
-    height: 100dvh;
     width: 100%;
+    min-height: 100dvh;
   }
   
   .content {
-    flex: 1;
+    /* flex: 1;
     height: 100dvh;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: hidden; */
+    flex: 1;
+    width: 100%;
+    min-height: 100dvh;
+    overflow: visible;
+    /* padding-bottom: calc(6rem + env(safe-area-inset-bottom)); */
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      margin-left: var(--sidebar-width);
+      width: calc(100% - var(--sidebar-width));
+    }
   }

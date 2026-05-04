@@ -1,16 +1,19 @@
 import "./NutrientInfo.css"
 import { motion } from "framer-motion"
 
-const ProgressBar = ({currentProgress, goal, size}) => {
+const ProgressBar = ({currentProgress, goal, size, isPercentage, percentage}) => {
 
-	const percentage = ((currentProgress / goal) * 100).toFixed(1);
+	const percent = 
+		isPercentage ? 
+		percentage : 
+		((currentProgress / goal) * 100).toFixed(1)
 
 	return(
 		<div className={`progress-bar-container ${size}`}>
 			<motion.div
 				className="bar"
 				initial={{width: 0}}
-				animate={{width: `${percentage}%`}}
+				animate={{width: `${percent}%`}}
 				transition={{duration: 0.7, ease: "easeInOut"}}
 			/>
 		</div>

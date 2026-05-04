@@ -18,12 +18,13 @@ import SideBar from "../../components/Modal/SideBar/SideBar";
 import SidebarMealPrep from "./components/SidebarMealPrep";
 import Button from "../../components/Buttons/Button";
 import WeeklyProgress from "./components/WeeklyProgress";
+import QuickActions from "./components/QuickActions";
 
 const Dashboard = () => {
 	const {fetchLatestQuiz, quizData} = useQuiz();
 	const navigate = useNavigate();
 	const { currentUser } = useAuth();
-	const {macroTotals} = useLogContext();
+	const {macroTotals, logFoodData} = useLogContext();
 	const isDesktop = useIsDesktop();
 	const isDesktopHorizontal = useIsDesktopHorizontal();
 
@@ -53,6 +54,7 @@ const Dashboard = () => {
 				className="page-container"
 				animate={{
 					marginRight: isDesktopHorizontal ? "386px" : "0px"
+					// marginLeft: isDesktop ? "128px" : "0px"
 				}}
 				transition={{ duration: 0.5, ease: "easeInOut" }}
 			>
@@ -70,42 +72,51 @@ const Dashboard = () => {
 					animate="visible"
 				>
 					{/* WEEKLY PROGRESS  */}
-					<motion.div variants={itemVariants}>
+					{/* <motion.div variants={itemVariants}>
 						<WeeklyProgress />
-					</motion.div>
+					</motion.div> */}
 
 					{/* DAILY PROGRESS  */}
 					<motion.div variants={itemVariants}>
 						<DailyProgress />
 					</motion.div>
 
-					{/* NUTRITION INFO  */}
-					{/* <motion.div variants={itemVariants}>
-						<NutrientInfo 
-							macroTotals={macroTotals}
-							quizData={quizData}
-						/>
-					</motion.div> */}
+					{/* QUICK ACTIONS  */}
+					<motion.span variants={itemVariants} className="main-bold-subtitle">Quick Actions</motion.span>
+
+					<motion.div variants={itemVariants} className="quick-actions-fade-wrap">
+						<div className="quick-actions-bleed">
+							<QuickActions />
+						</div>
+					</motion.div>
 
 					{/* LOG FOOD  */}
+					<motion.span variants={itemVariants} className="main-bold-subtitle">Macronutrient Totals</motion.span>
+
 					<motion.div variants={itemVariants}>
 						<LogButton />
 					</motion.div>
-
+					
 					{/* MEAL PREP  */}
-					<AnimatePresence mode="wait">
-						{!isDesktopHorizontal && (
-							<motion.div
-								key="meal-prep-dashboard"
-								variants={itemVariants}
-								initial="hidden"
-								animate="visible"
-								exit="hidden"
-							>
-								<MealPrepDashboard />
-							</motion.div>
-						)}
-					</AnimatePresence>
+					{!isDesktopHorizontal && (
+						<motion.span className="main-bold-subtitle">Curent Meal Plan</motion.span>
+					)}
+					
+					<motion.div variants={itemVariants}>
+						<AnimatePresence mode="wait">
+							{!isDesktopHorizontal && (
+								<motion.div
+									key="meal-prep-dashboard"
+									// variants={itemVariants}
+									// initial="hidden"
+									// animate="visible"
+									// exit="hidden"
+								>
+									<MealPrepDashboard />
+								</motion.div>
+							)}
+						</AnimatePresence>
+					</motion.div>
 					
 					
 				</motion.div>

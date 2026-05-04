@@ -16,11 +16,12 @@ const LogButton = () => {
 	return(
 		<div className="db-log-card card-design">
 			{/* HEADER  */}
-			<div className="db-daily-header">
+			{/* <div className="db-daily-header">
         <Icons size={"S"} icon="fa-solid fa-location-crosshairs"/>
 
         <span className="main-bold-title">Logged Food Totals</span>
-      </div>
+      </div> */}
+			<span className="main-bold-title">Logged Food Totals</span>
 
 			{/* PROGRESS CIRCLES  */}
 			<div className="db-log-prog">

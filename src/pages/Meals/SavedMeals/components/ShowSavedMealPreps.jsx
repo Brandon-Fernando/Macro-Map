@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import MealPrepModal from "../../MealPrep/components/MealPrepModal";
 import { useLocation } from "react-router-dom";
 import { containerVariants, itemVariants } from "../../../../animations/motionVariants";
+import Macros from "../../../../components/Macros/Macros";
 
 const ShowSavedMealPreps = () => {
 	// const [mealType, setMealType] = useState("")
@@ -30,9 +31,10 @@ const ShowSavedMealPreps = () => {
 				animate="visible"
 			>
 				<motion.div variants={itemVariants}>
-					<MacroModal 
+					{/* <MacroModal 
 						nutritionalFacts={mealPrep.totalMacros}
-					/>
+					/> */}
+					<Macros nutritionalFacts={mealPrep.totalMacros}/>
 				</motion.div>
 
 				<motion.div variants={itemVariants}>
