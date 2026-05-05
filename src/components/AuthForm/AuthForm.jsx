@@ -1,6 +1,6 @@
 import "./AuthForm.css"
 import { motion } from "framer-motion";
-import { slideFromBottom, inputHoverClickVariant } from "../../animations/motionVariants";
+import { slideFromBottom, inputHoverClickVariant, containerVariants } from "../../animations/motionVariants";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
@@ -135,12 +135,12 @@ const AuthForm = ({type}) => {
   return(
 		<>
 		{!isDesktopHorizontal && !isDesktop &&(
-			<motion.div
-				className="auth-form-container"
-				variants={slideFromBottom}
-				initial="hidden"
-				animate="visible"
-			>
+			// <motion.div
+			// 	className="auth-form-container"
+			// 	variants={containerVariants}
+			// 	initial="hidden"
+			// 	animate="visible"
+			// >
 				<AuthFormContent 
 					config={config}
 					renderField={renderField}
@@ -148,7 +148,7 @@ const AuthForm = ({type}) => {
 					handleSubmit={handleSubmit}
 					type={type}
 				/>
-			</motion.div>
+			// </motion.div>
 		)}
 		
 		{isDesktop && (

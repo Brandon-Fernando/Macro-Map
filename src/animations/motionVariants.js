@@ -339,3 +339,30 @@ export const navBar = {
     scale: 0.85
   }
 }
+
+// CIRCLE SPRING 
+
+export const circleContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+export const circleSpring = {
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 180,
+      damping: 16,
+    },
+  },
+};

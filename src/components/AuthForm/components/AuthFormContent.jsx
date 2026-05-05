@@ -1,21 +1,26 @@
 import Button from "../../Buttons/Button";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { buttonHoverClickVariant } from "../../../animations/motionVariants";
+import { buttonHoverClickVariant, containerVariants, itemVariants } from "../../../animations/motionVariants";
 
 const AuthFormContent = ({config, renderField, handleGoogleLogIn, handleSubmit, type}) => {
   const navigate = useNavigate();
 
   return(
-    <div className="login-form-container">
+    <motion.div 
+			className="login-form-container"
+			variants={containerVariants}
+			initial="hidden"
+			animate="visible"
+		>
 			{/* TITLE  */}
 			<div className="login-form-title-subtitle">
-				<span className="login-form-title">{config.title}</span>
-				<span className="login-form-subtitle">{config.subtitle}</span>
+				<motion.span variants={itemVariants} className="login-form-title">{config.title}</motion.span>
+				<motion.span variants={itemVariants} className="login-form-subtitle">{config.subtitle}</motion.span>
 			</div>
 
 			{/* FIELDS  */}
-			<div className="email-password-container">
+			<motion.div variants={itemVariants} className="email-password-container">
 				{/* INPUT FIELDS  */}
 				{type === "signup" && (
 					<div className="flname-container">
@@ -36,35 +41,40 @@ const AuthFormContent = ({config, renderField, handleGoogleLogIn, handleSubmit, 
 						handleClick={handleSubmit}
 					/>
 				</div>	
-			</div>
+			</motion.div>
 
 			{/* OR DIVIDER */}
-			<div className="or-break">
+			<motion.div variants={itemVariants} className="or-break">
 				<div className="left-line"></div>
 				<span>Or</span>
 				<div className="right-line"></div>
-			</div>
+			</motion.div>
 
 			{/* GOOGLE LOG IN  */}
 			<motion.div 
         className="google" 
-        onClick={() => handleGoogleLogIn()}
-        variants={buttonHoverClickVariant}
-        whileHover={"hover"}
-        whileTap={"tap"}
+				variants={itemVariants}
       >
-	 			<i className="fa-brands fa-google"></i>
-	 			<span>Sign in with Google</span>
+				<motion.div
+					onClick={() => handleGoogleLogIn()}
+					variants={buttonHoverClickVariant}
+					whileHover="hover"
+					whileTap="tap"
+				>
+					<i className="fa-brands fa-google"></i>
+					<span>Sign in with Google</span>
+				</motion.div>
+	 			
 	 		</motion.div>
 
 			{/* REDIRECT  */}
-			<span className="redirect">{config.redirectText}{" "}
+			<motion.span variants={itemVariants} className="redirect">{config.redirectText}{" "}
 	 			<span className="redirect-link" onClick={() => navigate(config.redirectTo)}
 					style={{cursor: "pointer"}}>
 						{config.redirectLink}
 				</span>
-			</span>
-		</div>
+			</motion.span>
+		</motion.div>
   )
 }
 

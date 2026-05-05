@@ -15,53 +15,31 @@ const Signup = () => {
 
 	return(
 		<div className="login-container">
+			{/* MOBILE LAYOUT  */}
 			{!isDesktopHorizontal && !isDesktop && (
-				<>
-				{/* BG GRADIENT  */}
-				<div className="bg-gradient-container">
-					<div className="circ circ1"></div>
-					<div className="circ circ2"></div>
-				</div>
-
-				{/* BACK BUTTON  */}
-				{/* <div className="back-button-signin-container" onClick={() => navigate("/")}>
-					<div className="back-button">
-						<i className="fa-solid fa-angle-left"></i>
+				<div className="login-wrapper">
+					<div className="login-back">
+						<BackButton color={"orange"} handleClick={() => navigate("/")}/>
 					</div>
 
-					<span>Back</span>
-				</div> */}
-				<div className="login-back">
-					<BackButton color={"white"} handleClick={() => navigate("/")}/>
-				</div>
+					<img src="/Logo/Logo.svg" alt="form-logo" />
 
-				{/* TITLE */}
-				<div className="login-title">
-					<h1 className="main-title"></h1>
+					<AuthForm type={"signup"}/>
 				</div>
-				
-				{/* AUTH FORM  */}
-				<AuthForm 
-					type="signup"
-				/>
-				</>
 			)}
 
+			{/* TABLET LAYOUT  */}
 			{isDesktop && !isDesktopHorizontal && (
-				<>
-					<div className="bg-gradient-container">
-						<div className="circ circ1"></div>
-						<div className="circ circ2"></div>
-					</div>
-
+				<div className="login-wrapper-tablet">
 					<div className="login-back">
 						<BackButton color={"white"} handleClick={() => navigate("/")}/>
 					</div>
 
 					<SignupTablet />
-				</>
+				</div>
 			)}
 
+			{/* DESKTOP LAYOUT  */}
 			{isDesktopHorizontal && (
 				<SignupDesktop />
 			)}

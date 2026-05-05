@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { slideFromLeftLong, slideFromRightLong, buttonHoverClickVariant } from "../../animations/motionVariants";
+import { slideFromLeftLong, slideFromRightLong, buttonHoverClickVariant, circleContainer, circleSpring } from "../../animations/motionVariants";
 import AuthForm from "../../components/AuthForm/AuthForm";
 import AuthFormContent from "../../components/AuthForm/components/AuthFormContent";
 import { useNavigate } from "react-router-dom";
@@ -16,10 +16,20 @@ const LoginDesktop = () => {
         animate="visible"
         className="gradient-sidebar-container"
       >
-        <div className={`bg-sidebar-container`}>
-          <div className="circle circle-one"></div>
-          <div className="circle circle-two"></div>
-        </div>
+        <motion.div 
+          className="circle-gradient"
+          variants={circleContainer}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div variants={circleSpring} className="outer-circle"/>
+
+          <motion.div variants={circleSpring} className="middle-circle"/>
+
+          <motion.div variants={circleSpring} className="center-circle">
+            <img src="/Logo/M.svg" alt="M" />
+          </motion.div>
+        </motion.div>
 
         <div className="back-title-sidebar">
           <div onClick={() => navigate("/")} className="back-btn-sidebar">
@@ -34,11 +44,10 @@ const LoginDesktop = () => {
 
             <span className="back-txt">Back</span>
           </div>
-
-          <span className="sidebar-main-title">MACRO MAP</span>
         </div>
       </motion.div>
 
+      {/* AUTH FORM  */}
       <motion.div
         className="login-forms-container"
         variants={slideFromRightLong}

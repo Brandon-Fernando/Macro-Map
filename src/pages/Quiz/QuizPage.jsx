@@ -12,14 +12,7 @@ const QuizPage = () => {
 		<>
 			{!isDesktopHorizontal && (
 				<div className="quiz-container">
-					{/* BG GRADIENT  */}
-					<div className="bg-gradient-container">
-						<div className="circ circ1"></div>
-						<div className="circ circ2"></div>
-					</div>
-
 					<QuizContent />
-
 				</div>
 			)}
 

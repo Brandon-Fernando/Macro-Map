@@ -88,7 +88,7 @@ RADIO INPUTS
     padding: 2rem;
     box-sizing: border-box;
     position: relative;
-    background-color: #FFE5CF;
+    background-image: linear-gradient(to bottom, #FE9844, #FFE1C9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,6 +242,7 @@ RADIO INPUTS
     font-family: "caros-bold";
     color: white;
     font-size: 2rem;
+    text-align: center;
 }
 
 .quiz-forms-container{

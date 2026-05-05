@@ -1,6 +1,6 @@
 import "./Quiz.css";
 import { motion } from "framer-motion";
-import { slideFromLeftLong, slideFromRightLong } from "../../animations/motionVariants";
+import { slideFromLeftLong, slideFromRightLong, circleContainer, circleSpring } from "../../animations/motionVariants";
 import { useNavigate } from "react-router-dom";
 import QuizContent from "./QuizContent";
 
@@ -15,22 +15,23 @@ const QuizPageDesktop = () => {
         animate="visible"
         className="gradient-sidebar-container"
       >
-        <div className={`bg-sidebar-container`}>
-          <div className="circle circle-one"></div>
-          <div className="circle circle-two"></div>
-        </div>
+       <motion.div 
+          className="circle-gradient"
+          variants={circleContainer}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div variants={circleSpring} className="outer-circle"/>
+
+          <motion.div variants={circleSpring} className="middle-circle"/>
+
+          <motion.div variants={circleSpring} className="center-circle">
+            <img src="/Logo/M.svg" alt="M" />
+          </motion.div>
+        </motion.div>
 
         <div className="back-title-sidebar">
-          {/* <div onClick={() => navigate("/")} className="back-btn-sidebar">
-            <div className="back-btn">
-              <i className="fa-solid fa-angle-left"></i>
-            </div>
-
-            <span className="back-txt">Back</span>
-          </div> */}
           <span className="sidebar-main-subtitle">A few quick questions before we start!</span>
-
-          <span className="sidebar-main-title">MACRO MAP</span>
         </div>
       </motion.div>
 
@@ -40,10 +41,7 @@ const QuizPageDesktop = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* <div className="quiz-forms"> */}
-          {/* <img src="/Logo/Logo.svg" alt="Logo" className="quiz-form-logo"/> */}
-          <QuizContent />
-        {/* </div> */}
+        <QuizContent />
       </motion.div>
     </div>
   )

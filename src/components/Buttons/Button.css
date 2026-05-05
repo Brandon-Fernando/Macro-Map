@@ -59,3 +59,12 @@
 .main-back-button-container.white .main-back-text{
     color: white;
 }
+
+.main-back-button-container.orange .main-back-button{
+    background-color: #FE9844;
+    color: white;
+}
+
+.main-back-button-container.orange .main-back-text{
+    color: #FE9844;
+}

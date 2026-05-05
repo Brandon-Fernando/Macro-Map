@@ -1,5 +1,5 @@
 /* CONTAINER  */
-.container{
+/* .container{
     width: 100%;
     height: 100dvh;
     background-color: #FFE5CF;
@@ -8,7 +8,117 @@
     flex-direction: column;
     position: relative;
     padding: 2.5rem 2rem;
+} */
+
+.container{
+    width: 100%;
+    height: 100dvh;
+    min-height: 0;
+    background-color: #F3F2F7;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* padding: 2.5rem 2rem; */
+    padding: 1rem;
+    gap: 1rem;
 }
+
+.gradient-bg-container{
+    width: 100%;
+    height: 90dvh;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #FE9844, #FFE1C9);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome{
+    position: absolute;
+    top: 1rem;
+    font-family: "caros-bold";
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+}
+
+.circle-gradient{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 60%;              
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-gradient div{
+    position: absolute;
+    border-radius: 50%;
+}
+
+.center-circle{
+    width: 40vw;
+    /* max-width: 15vw; */
+    max-width: 10rem;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(254, 152, 68, 0.52);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-circle img{
+    width: 50%;
+}
+  
+.middle-circle{
+    width: 70vw;
+    max-width: 20rem;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 164, 89, 0.36);
+    z-index: 2;
+}
+  
+.outer-circle{
+    width: 100vw;
+    max-width: 35rem;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 175, 110, 0.41);;
+    z-index: 1;
+}
+
+.home-button{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.sign-in-home{
+    width: 100%;
+}
+
+.sign-up{
+    font-family: "caros-bold";
+    color: #FE9844;
+    border-bottom: 2px solid #FE9844;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
 
 /* BACKGROUND GRADIENT  */
 .bg-gradient-container{
@@ -146,7 +256,7 @@
 .circ-one{
     width: 30vw;
     height: 60vh;
-    background: #FF7300;
+    background: #FE9844;
     top: 50%;
     left: 30%;
 }
@@ -154,7 +264,7 @@
 .circ-two{
     width: 30vw;
     height: 60vh;
-    background: #FF7300;
+    background: #FE9844;
     top: 50%;
     left: 70%;
 }
